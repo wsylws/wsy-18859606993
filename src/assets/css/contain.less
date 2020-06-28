@@ -1,0 +1,310 @@
+//
+//
+// 页面布局 -- 叶圣浩
+
+/*--------------------主体样式--------------------*/
+
+.app .el-main {
+  padding: 15px;
+
+  .el-tabs__nav-scroll {
+
+    padding: 0 34px;
+
+    .el-tabs__nav {
+      padding: 5px 0;
+    }
+
+    .el-tabs__item+.el-tabs__item::before {
+      content: " ";
+      display: block;
+      width: 1px;
+      height: 24px;
+      position: absolute;
+      top: 8px;
+      left: 0;
+      background: #E6E6E6;
+    }
+  }
+}
+
+/*--------------------头部样式--------------------*/
+
+.wrapper header {
+  height: 58px;
+  position: relative;
+
+  .my-header-search {
+    display: block;
+    float: left;
+    margin-top: 15px;
+  }
+
+
+  .my-header-right {
+    display: block;
+    float: right;
+    margin-right: 20px;
+    height: 100%;
+  }
+
+  .avatar {
+    cursor: pointer;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 100%;
+  }
+
+  .my-header-right>span,
+  .my-header-right>a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .my-header-right .avatar {
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px // margin: 17px 0 17px 10px;
+  }
+
+  .my-header-right .icon-quit {
+    font-size: 30px;
+    color: @color-gray;
+  }
+}
+
+/*--------------------左边导航样式--------------------*/
+
+.menu-box {
+  height: 100%;
+  background: #fff;
+  min-height: e("calc(100vh - 60px)");
+
+  .el-menu {
+    border: none;
+  }
+
+  .el-submenu.is-active {
+
+    background-color: lighten(@color-primary, 29%); // lighten拉亮颜色
+
+    span {
+      color: @color-primary;
+    }
+
+    &::before {
+      content: " ";
+      display: block;
+      width: 3px;
+      height: 30px;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      background: @color-primary;
+    }
+  }
+
+  .el-menu-item,
+  .el-submenu .el-menu-item,
+  .el-submenu__title {
+    height: 40px;
+    line-height: 40px;
+    min-width: 145px;
+    // margin-right: 10px;
+  }
+
+  .el-submenu__title {
+    height: 40px;
+    line-height: 40px;
+    min-width: 145px;
+    margin-right: 10px;
+  }
+
+  .el-menu-item:focus,
+  .el-menu-item:hover,
+  .el-submenu__title:focus,
+  .el-submenu__title:hover {
+    outline: 0;
+    // background-color: lighten(@color-primary, 29%) !important;
+    // color: #333 !important;
+  }
+
+  .el-menu-item.is-active {
+    // background-color: lighten(@color-primary, 29%) !important;// lighten拉亮颜色
+    // color: @color-primary;
+
+    &::before {
+      content: " ";
+      display: block;
+      width: 3px;
+      height: 30px;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      background: @color-primary;
+    }
+  }
+
+}
+
+/*--------------------表格搜索--------------------*/
+.form {
+  background: @color-white;
+}
+
+.form-inline {
+  background: @color-white;
+}
+
+/*--------------------表格默认样式--------------------*/
+// main-table
+
+.table-maxwidth {
+  max-width: 1000px;
+}
+
+.default-table {
+  background: #fff;
+  height: 100%;
+  padding: 10px 20px 30px 20px;
+
+  .el-table {
+    width: 100%;
+    margin-bottom: @pad;
+  }
+}
+
+.el-table .main-header-row-class {
+  background-color: rgba(240, 243, 248, 1);
+}
+
+.el-table th .el-dropdown {
+  line-height: 23px;
+  vertical-align: middle;
+
+  .el-dropdown-link {
+    font-size: 14px;
+  }
+}
+
+// .el-table .dropdow-cell .cell {
+//   line-height: inherit;
+
+// }
+
+/*--------------------富文本编辑器--------------------*/
+
+
+.quill-editor {
+  // width: 1063px;
+}
+
+.ql-toolbar.ql-snow+.ql-container.ql-snow {
+  height: 300px;
+}
+
+/*--------------------时间轴--------------------*/
+
+.app .el-timeline-item__tail {
+
+  border-left: 1px solid @color-primary;
+}
+
+.app .el-timeline-item__node--normal {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    display: block;
+    border: 1px solid #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+  }
+}
+
+/*--------------------杂项--------------------*/
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+// el-radio
+.tab-item-box-m {
+  .el-radio-group {
+    margin-right: 10px;
+  }
+}
+
+//form flex
+.ul-flex-textarea {
+  .el-form-item__content {
+    width: 89% !important;
+
+    .el-textarea__inner {
+      height: 120px;
+    }
+  }
+}
+
+.ul-flex {
+  .el-textarea__inner {
+    height: 120px;
+  }
+
+  .ul-item {
+    .el-input {
+      width: 90%;
+    }
+  }
+
+  .el-form-item {
+    display: flex !important;
+    align-items: center;
+
+    .el-form-item__content {
+      display: flex !important;
+
+      .el-select {
+        width: 100%;
+      }
+    }
+  }
+
+
+}
+
+//table padding
+
+.class-table {
+  padding: 0 1%;
+}
+
+.inline-edit .el-input__inner {
+  padding: 0;
+}
+
+// 合计
+.table-total {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 15px;
+}
